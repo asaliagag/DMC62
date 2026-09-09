@@ -1,8 +1,11 @@
 import streamlit as st
+import numpy as np
 
 st.title("Especialización Python for Analytics")
 st.sidebar.title("Parámetros")
 st.write("Elaborado por: Andrea Aliaga")
+
+st.image("Python_logo.png")
 
 modulos = st.sidebar.selectbox("Selecione el módulo",["Listas", "Arreglos", "Funciones", "POO"])
 
