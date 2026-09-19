@@ -52,7 +52,7 @@ if opcion == "Home":
 
     st.write("**Nombre:** ANDREA ALIAGA GARMA")
     st.write("**Curso:** Python for Analytics")
-    st.write("**Módulo:** Módulo 1")
+    st.write("**Módulo:** Módulo 1 - Python Fundamentals")
     st.write("**Año:** 2026")
 
     st.markdown("---")
