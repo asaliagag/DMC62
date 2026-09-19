@@ -34,8 +34,11 @@ opcion = st.sidebar.selectbox(
 if opcion == "Home":
 
     st.title("🐾 PetMarket Analytics")
+
     st.subheader("Sistema de Gestión y Análisis para Tienda de Mascotas")
-     try:
+
+    # Logo del proyecto
+    try:
         st.image(
             "logo_petmarket.png",
             width=350
@@ -53,7 +56,6 @@ if opcion == "Home":
     st.write("**Año:** 2026")
 
     st.markdown("---")
-
     st.subheader("Descripción del proyecto")
 
     st.markdown("""
