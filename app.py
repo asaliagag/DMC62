@@ -52,7 +52,7 @@ if opcion == "Home":
 
     st.write("**Nombre:** ANDREA ALIAGA GARMA")
     st.write("**Curso:** Python for Analytics")
-    st.write("**Módulo:** Módulo 1")
+    st.write("**Módulo:** Módulo 1 - Python Fundamentals")
     st.write("**Año:** 2026")
 
     st.markdown("---")
@@ -69,25 +69,18 @@ if opcion == "Home":
     - Registrar ventas de productos.
     - Analizar el margen neto del negocio.
     - Gestionar el inventario de productos.
-
-    El proyecto permite aplicar conceptos fundamentales de Python como
-    variables, listas, estructuras de datos, condicionales, funciones,
-    arrays de NumPy, DataFrames y Programación Orientada a Objetos.
     """)
 
     st.subheader("Tecnologías utilizadas")
+    
+        st.write("🐍 Python")
+        st.write("📊 Streamlit")
+        st.write("🐼 Pandas")
+        st.write("🔢 NumPy")
+        st.write("📦 Programación Orientada a Objetos")
 
-    st.write("🐍 Python")
-    st.write("📊 Streamlit")
-    st.write("🐼 Pandas")
-    st.write("🔢 NumPy")
-    st.write("📦 Programación Orientada a Objetos")
-
-
-# ============================================================
 # EJERCICIO 1
 # FLUJO DE CAJA CON LISTAS
-# ============================================================
 
 elif opcion == "Ejercicio 1":
 
