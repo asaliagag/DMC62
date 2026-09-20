@@ -96,7 +96,6 @@ elif opcion == "Ejercicio 1":
     el total de ingresos, total de gastos y saldo final del negocio.
     """)
 
-    # Creamos la lista la primera vez que se ejecuta la aplicación
     if "movimientos" not in st.session_state:
         st.session_state.movimientos = []
 
