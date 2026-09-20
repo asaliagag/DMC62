@@ -51,6 +51,7 @@ if opcion == "Home":
     st.subheader("Información del estudiante")
 
     st.write("**Nombre:** ANDREA ALIAGA GARMA")
+    st.write("**Profesión:** Ingeniera Industrial")
     st.write("**Curso:** Python for Analytics")
     st.write("**Módulo:** Módulo 1 - Python Fundamentals")
     st.write("**Año:** 2026")
