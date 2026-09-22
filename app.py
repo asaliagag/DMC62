@@ -355,7 +355,7 @@ elif opcion == "Ejercicio 3":
     """)
 
     funcion_seleccionada = st.selectbox(
-        "Seleccione la función",
+        "Función seleccionada",
         ["Calcular Margen Neto"]
     )
 
