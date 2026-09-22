@@ -222,10 +222,7 @@ elif opcion == "Ejercicio 1":
         )
 
 
-# ============================================================
 # EJERCICIO 2
-# REGISTRO CON NUMPY, ARRAYS Y DATAFRAME
-# ============================================================
 
 elif opcion == "Ejercicio 2":
 
@@ -233,13 +230,9 @@ elif opcion == "Ejercicio 2":
 
     st.markdown("""
     Este ejercicio permite registrar las **ventas de productos de PetMarket**.
-
-    Los datos ingresados son almacenados utilizando arrays de **NumPy**
-    y posteriormente son convertidos en un **DataFrame de Pandas** para
-    visualizar los registros.
     """)
 
-    # Lista donde se almacenarán los arrays
+    # Array
     if "ventas" not in st.session_state:
         st.session_state.ventas = []
 
@@ -290,10 +283,10 @@ elif opcion == "Ejercicio 2":
 
         else:
 
-            # Calculamos el total de la venta
+            # Total de la venta
             total = precio * cantidad
 
-            # Creamos un array NumPy
+        
             nueva_venta = np.array(
                 [
                     producto,
@@ -305,7 +298,7 @@ elif opcion == "Ejercicio 2":
                 dtype=object
             )
 
-            # Agregamos el array a la lista
+          
             st.session_state.ventas.append(
                 nueva_venta
             )
@@ -314,21 +307,17 @@ elif opcion == "Ejercicio 2":
                 "Venta registrada correctamente."
             )
 
-    # --------------------------------------------------------
-    # MOSTRAR REGISTROS
-    # --------------------------------------------------------
+   # MOSTRAR REGISTROS
 
     if len(st.session_state.ventas) > 0:
 
         st.subheader("Ventas registradas")
 
-        # Convertimos la lista en un array NumPy
         array_ventas = np.array(
             st.session_state.ventas,
             dtype=object
         )
 
-        # Convertimos el array en DataFrame
         df_ventas = pd.DataFrame(
             array_ventas,
             columns=[
@@ -352,10 +341,7 @@ elif opcion == "Ejercicio 2":
         )
 
 
-# ============================================================
 # EJERCICIO 3
-# FUNCIÓN DESDE LIBRERÍA EXTERNA
-# ============================================================
 
 elif opcion == "Ejercicio 3":
 
