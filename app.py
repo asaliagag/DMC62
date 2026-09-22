@@ -348,23 +348,17 @@ elif opcion == "Ejercicio 3":
     st.title("📈 Ejercicio 3 - Análisis de Margen Neto")
 
     st.markdown("""
-    Este ejercicio utiliza una **función proveniente de una librería
-    externa** para analizar la rentabilidad de PetMarket.
+    Este ejercicio busca analizar la rentabilidad de PetMarket. 
+    Calcula la utilidad bruta, utilidad neta y margen neto a 
+    partir de los ingresos, costos, gastos operativos e impuestos.
 
-    A partir de los ingresos, costos, gastos operativos e impuestos,
-    se calcula la utilidad bruta, utilidad neta y margen neto.
     """)
-
-    # --------------------------------------------------------
-    # SELECTOR DE FUNCIÓN
-    # --------------------------------------------------------
 
     funcion_seleccionada = st.selectbox(
         "Seleccione la función",
         ["Calcular Margen Neto"]
     )
 
-    # Histórico
     if "historico_margen" not in st.session_state:
         st.session_state.historico_margen = []
 
@@ -398,7 +392,6 @@ elif opcion == "Ejercicio 3":
 
         try:
 
-            # Ejecutamos la función de la librería externa
             resultado = calcular_margen_neto(
                 ingresos,
                 costos,
@@ -435,7 +428,6 @@ elif opcion == "Ejercicio 3":
                     f"{resultado['margen_neto_pct']:.2f}%"
                 )
 
-            # Guardamos el resultado en el histórico
             registro = {
                 "Ingresos": ingresos,
                 "Costos": costos,
@@ -456,9 +448,6 @@ elif opcion == "Ejercicio 3":
                 f"Error: {error}"
             )
 
-    # --------------------------------------------------------
-    # HISTÓRICO
-    # --------------------------------------------------------
 
     if len(st.session_state.historico_margen) > 0:
 
@@ -480,10 +469,7 @@ elif opcion == "Ejercicio 3":
         )
 
 
-# ============================================================
 # EJERCICIO 4
-# CLASE EXTERNA + CRUD
-# ============================================================
 
 elif opcion == "Ejercicio 4":
 
