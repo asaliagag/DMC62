@@ -137,9 +137,6 @@ elif opcion == "Ejercicio 1":
 
             st.success("Movimiento agregado correctamente.")
 
-    # --------------------------------------------------------
-    # MOSTRAR MOVIMIENTOS
-    # --------------------------------------------------------
 
     if len(st.session_state.movimientos) > 0:
 
@@ -154,10 +151,8 @@ elif opcion == "Ejercicio 1":
             use_container_width=True
         )
 
-        # ----------------------------------------------------
         # CALCULAR INGRESOS
-        # ----------------------------------------------------
-
+        
         total_ingresos = 0
 
         for movimiento in st.session_state.movimientos:
@@ -165,9 +160,7 @@ elif opcion == "Ejercicio 1":
             if movimiento["Tipo"] == "Ingreso":
                 total_ingresos = total_ingresos + movimiento["Valor"]
 
-        # ----------------------------------------------------
         # CALCULAR GASTOS
-        # ----------------------------------------------------
 
         total_gastos = 0
 
@@ -176,7 +169,8 @@ elif opcion == "Ejercicio 1":
             if movimiento["Tipo"] == "Gasto":
                 total_gastos = total_gastos + movimiento["Valor"]
 
-        # Saldo final
+        # SALDO FINAL
+        
         saldo_final = total_ingresos - total_gastos
 
         st.subheader("Resumen del flujo de caja")
@@ -201,9 +195,7 @@ elif opcion == "Ejercicio 1":
                 f"S/ {saldo_final:,.2f}"
             )
 
-        # ----------------------------------------------------
         # EVALUACIÓN DEL FLUJO
-        # ----------------------------------------------------
 
         if saldo_final > 0:
 
