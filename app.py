@@ -476,23 +476,17 @@ elif opcion == "Ejercicio 4":
     st.title("📦 Ejercicio 4 - Gestión de Inventario")
 
     st.markdown("""
-    Este ejercicio utiliza la clase **InventarioProducto** proveniente
-    de una librería externa.
+    Se utiliza la clase **InventarioProducto** proveniente
+    de la librería libreria_clases_proyecto1.py.
 
     La aplicación permite gestionar el inventario de PetMarket mediante
     las operaciones básicas **CRUD**:
 
-    - **Crear:** registrar un nuevo producto.
-    - **Leer:** visualizar los productos.
-    - **Actualizar:** modificar un producto existente.
-    - **Eliminar:** retirar un producto del inventario.
     """)
 
-    # Lista de productos
     if "inventario" not in st.session_state:
         st.session_state.inventario = []
 
-    # Creamos las pestañas
     tab_crear, tab_leer, tab_actualizar, tab_eliminar = st.tabs(
         [
             "Crear",
@@ -502,10 +496,7 @@ elif opcion == "Ejercicio 4":
         ]
     )
 
-    # ========================================================
-    # CREATE - CREAR
-    # ========================================================
-
+   
     with tab_crear:
 
         st.subheader("Registrar nuevo producto")
@@ -559,7 +550,6 @@ elif opcion == "Ejercicio 4":
 
                 try:
 
-                    # Creamos un objeto de la clase InventarioProducto
                     nuevo_producto = InventarioProducto(
                         nombre,
                         costo_unitario,
@@ -568,7 +558,7 @@ elif opcion == "Ejercicio 4":
                         stock_minimo
                     )
 
-                    # Guardamos el objeto en nuestra lista
+                   
                     st.session_state.inventario.append(
                         nuevo_producto
                     )
@@ -583,9 +573,6 @@ elif opcion == "Ejercicio 4":
                         f"Error: {error}"
                     )
 
-    # ========================================================
-    # READ - LEER
-    # ========================================================
 
     with tab_leer:
 
@@ -595,10 +582,8 @@ elif opcion == "Ejercicio 4":
 
             lista_productos = []
 
-            # Recorremos los objetos guardados
             for producto_inventario in st.session_state.inventario:
 
-                # Utilizamos el método resumen de la clase
                 datos_producto = producto_inventario.resumen()
 
                 lista_productos.append(
@@ -609,8 +594,6 @@ elif opcion == "Ejercicio 4":
                 lista_productos
             )
 
-            # Cambiamos los nombres para que sean
-            # más fáciles de entender en la interfaz
             df_inventario = df_inventario.rename(
                 columns={
                     "producto": "Producto",
@@ -633,17 +616,12 @@ elif opcion == "Ejercicio 4":
                 "Todavía no existen productos registrados."
             )
 
-    # ========================================================
-    # UPDATE - ACTUALIZAR
-    # ========================================================
-
     with tab_actualizar:
 
         st.subheader("Actualizar producto")
 
         if len(st.session_state.inventario) > 0:
 
-            # Obtenemos los nombres de los productos
             nombres_productos = []
 
             for producto_inventario in st.session_state.inventario:
@@ -658,7 +636,7 @@ elif opcion == "Ejercicio 4":
                 key="producto_actualizar"
             )
 
-            # Buscamos la posición del producto
+            
             indice = nombres_productos.index(
                 producto_seleccionado
             )
@@ -743,9 +721,6 @@ elif opcion == "Ejercicio 4":
                 "Primero debe registrar un producto."
             )
 
-    # ========================================================
-    # DELETE - ELIMINAR
-    # ========================================================
 
     with tab_eliminar:
 
